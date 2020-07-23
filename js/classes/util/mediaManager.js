@@ -8,7 +8,7 @@ class MediaManager {
 
   musicChanged() {
     if (this.background) {
-      if (model.musciOn == false) {
+      if (model.musciOn === false) {
         this.background.stop();
       } else {
         this.background.play();
@@ -17,18 +17,16 @@ class MediaManager {
   }
 
   playSound(key) {
-    if(model.soundOn == true) {
-      var sound = this.scene.sound.add(key);
+    if (model.soundOn === true) {
+      const sound = this.scene.sound.add(key);
       sound.play();
     }
-
   }
 
   setBackgroundMusic(key) {
-    if (model.musicOn == true) {
-      this.background = this.scene.sound.add(key, { volume: .5, loop: true });
+    if (model.musicOn === true) {
+      this.background = this.scene.sound.add(key, { volume: 0.5, loop: true });
       this.background.play();
     }
-
   }
 }

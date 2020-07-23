@@ -7,9 +7,9 @@ class ToggleButton extends Phaser.GameObjects.Container {
     this.onIcon = this.scene.add.image(0, 0, config.onIcon);
     this.offIcon = this.scene.add.image(0, 0, config.offIcon);
 
-    Align.scaleToGameW(this.back, .1);
-    Align.scaleToGameW(this.onIcon, .05);
-    Align.scaleToGameW(this.offIcon, .05);
+    Align.scaleToGameW(this.back, 0.1);
+    Align.scaleToGameW(this.onIcon, 0.05);
+    Align.scaleToGameW(this.offIcon, 0.05);
 
     this.add(this.back);
     this.add(this.onIcon);
@@ -51,7 +51,7 @@ class ToggleButton extends Phaser.GameObjects.Container {
   }
 
   setIcons() {
-    if (this.value == true) {
+    if (this.value === true) {
       this.onIcon.visible = true;
       this.offIcon.visible = false;
     } else {

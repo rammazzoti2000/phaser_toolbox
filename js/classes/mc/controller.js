@@ -1,3 +1,4 @@
+/* eslint-disable class-methods-use-this */
 class Controller {
   constructor() {
     emitter.on(G.SET_SCORE, this.setScore);
@@ -15,11 +16,11 @@ class Controller {
   }
 
   setScore(score) {
-    model.score= score;
+    model.score = score;
   }
 
   upPoints(points) {
-    var score = model.score;
+    let { score } = model;
     score += points;
     model.score = score;
   }

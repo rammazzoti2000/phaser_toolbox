@@ -5,12 +5,12 @@ class Align {
   }
 
   static center(obj) {
-    obj.x =  game.config.width / 2;
+    obj.x = game.config.width / 2;
     obj.y = game.config.height / 2;
   }
 
   static centerH(obj) {
-    obj.x =  game.config.width / 2;
+    obj.x = game.config.width / 2;
   }
 
   static centerV(obj) {

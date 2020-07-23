@@ -1,3 +1,4 @@
+/* eslint-disable no-underscore-dangle */
 class Model {
   constructor() {
     this._score = 0;
